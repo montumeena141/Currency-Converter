@@ -1,0 +1,209 @@
+*{
+  margin: 0;
+  padding: 0;  
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4e4ba;
+}
+
+.container{
+    background-color: #ffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-height: 55vh;
+    width: 30%;
+}
+
+form{
+    margin: 2rem 0 2rem 0;
+}
+
+form select,button,input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+}
+
+form input{
+    border:1px solid lightgray;
+    font-size: 1rem;
+    height: 3rem;
+    padding-left: 0.5rem;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.dropdown i{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.select-container img{
+    max-width: 2rem;
+}
+
+.select-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    border-radius: 0.5rem;
+    border:1px solid lightgray;
+    /* background-color:red; */
+}
+
+.select-container select{
+    font-size: 1rem;
+    width: auto;
+    border: none;
+}
+
+.msg{
+    margin: 2rem;
+}
+
+form button{
+    height: 3rem;
+    background-color: #af4d98;
+    color: #ffff;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+.msg{
+    text-align: center;
+    color: red;
+    font-weight:bold;
+}
+
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .select-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Mobile view (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    /* width: 90%; */
+    padding: 1rem;
+  }
+
+  form input, form button {
+    font-size: 0.95rem;
+    height: 2.5rem;
+  }
+
+  .dropdown i {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .msg {
+    font-size: 0.9rem;
+    margin: 1.5rem;
+  }
+  .from p{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .to p{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+
+
+
+/* new code */
+/* ===== Added Styling Enhancements ===== */
+
+/* Smooth font and spacing */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container shadow and hover */
+.container {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-15px);
+}
+
+/* Header text style */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Input and button hover/focus */
+form input:focus {
+  border: 2px solid #af4d98;
+  box-shadow: 0 0 5px rgba(175, 77, 152, 0.5);
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #933b80;
+  transition: 0.3s;
+}
+
+/* Fancy underline placeholder animation */
+form p {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+
+
+form input:focus + .underline::after {
+  width: 100%;
+}
+
+/* Icon bounce effect on hover */
+.dropdown i:hover {
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Flag image circle */
+.select-container img {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
